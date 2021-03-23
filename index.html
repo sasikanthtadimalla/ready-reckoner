@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ready Reckoner</title>
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.png">
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/6cddfe5d5a.js" crossorigin="anonymous"></script>
+  <!-- Google Font API -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <!-- Botstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+  <!-- <script type="text/javascript" src="Scripts/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="Scripts/bootstrap.min.js"></script> -->
+  <!-- Native CSS -->
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <section id="top-section">
+    <div class="row top-row">
+      <div class="col-lg-3 left-div">
+        <img src="images/coal-india-logo.png" alt="coal india logo">
+      </div>
+      <div class="col-lg-6 center-div">
+        <h2>Ready Reckoner</h2>
+        <h5>For Instant Calculation of Credit/Debit Notes Against Dispatches From <strong>Non-Cost Plus</strong> Mines</h5>
+      </div>
+      <div class="col-lg-3 right-div">
+        <p class=""><a class="about links" href="about.html">About</a>|<a class="contact links" href="contact.html">Contact</a></p>
+
+
+        <!-- <nav class="navbar navbar-expand-lg navbar-light navbar-default navbar-fixed-top">
+          <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon navbar-dark"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto navigation">
+              <li class="nav-item ml-auto">
+                <a class="nav-link nav-link-1" href="about.html">About</a>
+              </li>
+              <li class="nav-item ml-auto">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav> -->
+      </div>
+    </div>
+  </section>
+
+  <section id="middle-section">
+    <div class=" middle-div">
+      <div class="container-fluid">
+        <div class="row middle-div-top">
+          <div class="col-md-3 col-sm-12 dropdown-1-div">
+            <div class="dropdown dropdown-1">
+              <button class="btn btn-sm btn-light dropdown-toggle dropdown-toggle-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Select Price Component
+              </button>
+              <div class="dropdown-menu dropdown-menu-1" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item dropdown-item-1">ROM (Power)</a>
+                <a class="dropdown-item dropdown-item-1">ROM (Non - Power)</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12 dropdown-2-div">
+            <div class="dropdown dropdown-2">
+              <button class="btn btn-sm btn-light dropdown-toggle dropdown-toggle-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Select Billed Grade
+              </button>
+              <div class="dropdown-menu dropdown-menu-2" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item dropdown-item-2">G6</a>
+                <a class="dropdown-item dropdown-item-2">G7</a>
+                <a class="dropdown-item dropdown-item-2">G8</a>
+                <a class="dropdown-item dropdown-item-2">G9</a>
+                <a class="dropdown-item dropdown-item-2">G10</a>
+                <a class="dropdown-item dropdown-item-2">G11</a>
+                <a class="dropdown-item dropdown-item-2">G12</a>
+                <a class="dropdown-item dropdown-item-2">G13</a>
+              </div>
+            </div>
+            <span class="badge badge-info price-rupees">Price (Rs/Ton)</span>
+            <span class="badge badge-secondary value"> - </span>
+          </div>
+          <div class="col-md-3 col-sm-12 enter-billed-qty-div">
+            <input class="enter-billed-qty" type="number" placeholder="Enter Billed Qty (LT)">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="main-content">
+        <table class="table">
+          <thead>
+            <tr class="bg-primary table-heading">
+              <th class="top-left-corner">Analyzed Grade</th> <!--  -->
+              <th>Grade Materialization / Slippage (%)</th> <!--  -->
+              <th>Price Difference (Rs/Ton)</th> <!--  -->
+              <th class="top-right-corner">Corresponding Coal Value (Rs/Ton)</th> <!--  -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="bg-info">(+) 6 Gr</td>
+              <td> <input type="number" name="" value=""> </td>
+              <td class="bg-secondary">0</td>
+              <td class="bg-secondary">0</td>
+            </tr>
+            <tr>
+              <td class="bg-info">(+) 5 Gr</td>
+              <td> <input type="number" name="" value=""> </td>
+              <td class="bg-secondary">0</td>
+              <td class="bg-secondary">0</td>
+            </tr>
+            <tr>
+              <td class="bg-info">(+) 4 Gr</td>
+              <td> <input type="number" name="" value=""> </td>
+              <td class="bg-secondary">0</td>
+              <td class="bg-secondary">0</td>
+            </tr>
+            <tr>
+              <td class="bg-info">(+) 3 Gr</td>
+              <td> <input type="number" name="" value=""> </td>
+              <td class="bg-secondary">0</td>
+              <td class="bg-secondary">0</td>
+            </tr>
+            <tr>
+              <td class="bg-info">(+) 2 Gr</td>
+              <td> <input type="number" name="" value=""> </td>
+              <td class="bg-secondary">0</td>
+              <td class="bg-secondary">0</td>
+            </tr>
+            <tr>
+              <td class="bg-info">(+) 1 Gr</td>
+              <td> <input type="number" name="" value=""> </td>
+              <td class="bg-secondary">0</td>
+              <td class="bg-secondary">0</td>
+            </tr>
+            <tr>
+              <td class="bg-info yellow-text">Within Grade</td>
+              <td> <input class="within-gr-input" type="number" name="" value=""> </td>
+              <td class="bg-secondary">0</td>
+              <td class="bg-secondary">0</td>
+            </tr>
+            <tr>
+              <td class="bg-info">(-) 1 Gr</td>
+              <td> <input type="number" name="" value=""> </td>
+              <td class="bg-secondary">0</td>
+              <td class="bg-secondary">0</td>
+            </tr>
+            <tr>
+              <td class="bg-info">(-) 2 Gr</td>
+              <td> <input type="number" name="" value=""> </td>
+              <td class="bg-secondary">0</td>
+              <td class="bg-secondary">0</td>
+            </tr>
+            <tr>
+              <td class="bg-info">(-) 3 Gr</td>
+              <td> <input type="number" name="" value=""> </td>
+              <td class="bg-secondary">0</td>
+              <td class="bg-secondary">0</td>
+            </tr>
+            <tr>
+              <td class="bg-info">(-) 4 Gr</td>
+              <td> <input type="number" name="" value=""> </td>
+              <td class="bg-secondary">0</td>
+              <td class="bg-secondary">0</td>
+            </tr>
+            <tr>
+              <td class="bg-info">(-) 5 Gr</td>
+              <td> <input type="number" name="" value=""> </td>
+              <td class="bg-secondary">0</td>
+              <td class="bg-secondary">0</td>
+            </tr>
+            <tr>
+              <td class="bg-info">(-) 6 Gr</td>
+              <td> <input type="number" name="" value=""> </td>
+              <td class="bg-secondary">0</td>
+              <td class="bg-secondary">0</td>
+            </tr>
+            <tr>
+              <td class="bg-info">(-) 7 Gr</td>
+              <td> <input type="number" name="" value=""> </td>
+              <td class="bg-secondary">0</td>
+              <td class="bg-secondary">0</td>
+            </tr>
+            <tr>
+              <td class="bg-info">(-) 8 Gr</td>
+              <td> <input type="number" name="" value=""> </td>
+              <td class="bg-secondary">0</td>
+              <td class="bg-secondary">0</td>
+            </tr>
+            <tr>
+              <td class="bg-info">(-) 9 Gr</td>
+              <td> <input type="number" name="" value=""> </td>
+              <td class="bg-secondary">0</td>
+              <td class="bg-secondary">0</td>
+            </tr>
+            <tr>
+              <td class="bg-info">(-) 10 Gr</td>
+              <td> <input type="number" name="" value=""> </td>
+              <td class="bg-secondary">0</td>
+              <td class="bg-secondary">0</td>
+            </tr>
+            <tr>
+              <td class="bg-info">(-) 11 Gr</td>
+              <td> <input type="number" name="" value=""> </td>
+              <td class="bg-secondary">0</td>
+              <td class="bg-secondary">0</td>
+            </tr>
+            <tr>
+              <td class="bg-info yellow-text bottom-left-corner">Un - Graded</td>
+              <td> <input class="un-graded-input" type="number" name="" value=""> </td>
+              <td class="bg-secondary">0</td>
+              <td class="bg-secondary bottom-right-corner">0</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- <div class="row middle-section-middle-row middle-div-middle">
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 columns analyzed-grade-column">
+            <span class="badge badge-info titles title-small analyzed-grade">Analyzed Grade</span>
+            <span class="badge badge-secondary elements analyzed-grade">(+) 6 Gr</span>
+            <span class="badge badge-secondary elements analyzed-grade">(+) 5 Gr</span>
+            <span class="badge badge-secondary elements analyzed-grade">(+) 4 Gr</span>
+            <span class="badge badge-secondary elements analyzed-grade">(+) 3 Gr</span>
+            <span class="badge badge-secondary elements analyzed-grade">(+) 2 Gr</span>
+            <span class="badge badge-secondary elements analyzed-grade">(+) 1 Gr</span>
+            <span class="badge badge-secondary elements within-gr analyzed-grade">Within Grade</span>
+            <span class="badge badge-secondary elements analyzed-grade">(-) 1 Gr</span>
+            <span class="badge badge-secondary elements analyzed-grade">(-) 2 Gr</span>
+            <span class="badge badge-secondary elements analyzed-grade">(-) 3 Gr</span>
+            <span class="badge badge-secondary elements analyzed-grade">(-) 4 Gr</span>
+            <span class="badge badge-secondary elements analyzed-grade">(-) 5 Gr</span>
+            <span class="badge badge-secondary elements analyzed-grade">(-) 6 Gr</span>
+            <span class="badge badge-secondary elements analyzed-grade">(-) 7 Gr</span>
+            <span class="badge badge-secondary elements analyzed-grade">(-) 8 Gr</span>
+            <span class="badge badge-secondary elements analyzed-grade">(-) 9 Gr</span>
+            <span class="badge badge-secondary elements analyzed-grade">(-) 10 Gr</span>
+            <span class="badge badge-secondary elements analyzed-grade">(-) 11 Gr</span>
+            <span class="badge badge-secondary elements within-gr analyzed-grade">Un-Graded</span>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 columns grade-mat-column">
+            <span class="badge badge-info titles grade-mat">Grade Materialization / Slippage (%)</span>
+            <input class="textbox elements gm1 grade-mat" type="number" name="" value="" placeholder="Enter percentage (if any)">
+            <input class="textbox elements gm2 grade-mat" type="number" name="" value="" placeholder="Enter percentage (if any)">
+            <input class="textbox elements gm3 grade-mat" type="number" name="" value="" placeholder="Enter percentage (if any)">
+            <input class="textbox elements gm4 grade-mat" type="number" name="" value="" placeholder="Enter percentage (if any)">
+            <input class="textbox elements gm5 grade-mat" type="number" name="" value="" placeholder="Enter percentage (if any)">
+            <input class="textbox elements gm6 grade-mat" type="number" name="" value="" placeholder="Enter percentage (if any)">
+            <input class="textbox elements gm7 grade-mat" type="number" name="" value="" placeholder="Enter percentage (if any)">
+            <input class="textbox elements gm8 grade-mat" type="number" name="" value="" placeholder="Enter percentage (if any)">
+            <input class="textbox elements gm9 grade-mat" type="number" name="" value="" placeholder="Enter percentage (if any)">
+            <input class="textbox elements gm10 grade-mat" type="number" name="" value="" placeholder="Enter percentage (if any)">
+            <input class="textbox elements gm11 grade-mat" type="number" name="" value="" placeholder="Enter percentage (if any)">
+            <input class="textbox elements gm12 grade-mat" type="number" name="" value="" placeholder="Enter percentage (if any)">
+            <input class="textbox elements gm13 grade-mat" type="number" name="" value="" placeholder="Enter percentage (if any)">
+            <input class="textbox elements gm14 grade-mat" type="number" name="" value="" placeholder="Enter percentage (if any)">
+            <input class="textbox elements gm15 grade-mat" type="number" name="" value="" placeholder="Enter percentage (if any)">
+            <input class="textbox elements gm16 grade-mat" type="number" name="" value="" placeholder="Enter percentage (if any)">
+            <input class="textbox elements gm17 grade-mat" type="number" name="" value="" placeholder="Enter percentage (if any)">
+            <input class="textbox elements gm18 grade-mat" type="number" name="" value="" placeholder="Enter percentage (if any)">
+            <input class="textbox elements gm19 grade-mat" type="number" name="" value="" placeholder="Enter percentage (if any)">
+          </div>
+
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 columns price-diff-column">
+            <span class="badge badge-info titles title-small">Price Difference (Rs/Ton)</span>
+            <span class="badge badge-secondary elements pd1">0</span>
+            <span class="badge badge-secondary elements pd2">0</span>
+            <span class="badge badge-secondary elements pd3">0</span>
+            <span class="badge badge-secondary elements pd4">0</span>
+            <span class="badge badge-secondary elements pd5">0</span>
+            <span class="badge badge-secondary elements pd6">0</span>
+            <span class="badge badge-secondary elements pd7">0</span>
+            <span class="badge badge-secondary elements pd8">0</span>
+            <span class="badge badge-secondary elements pd9">0</span>
+            <span class="badge badge-secondary elements pd10">0</span>
+            <span class="badge badge-secondary elements pd11">0</span>
+            <span class="badge badge-secondary elements pd12">0</span>
+            <span class="badge badge-secondary elements pd13">0</span>
+            <span class="badge badge-secondary elements pd14">0</span>
+            <span class="badge badge-secondary elements pd15">0</span>
+            <span class="badge badge-secondary elements pd16">0</span>
+            <span class="badge badge-secondary elements pd17">0</span>
+            <span class="badge badge-secondary elements pd18">0</span>
+            <span class="badge badge-secondary elements pd19">0</span>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 columns corres-coal-value-column">
+            <span class="badge badge-info titles title-small corres-coal-value">Corresponding Coal Value (Rs/Ton)</span>
+            <span class="badge badge-secondary elements fcv1 corres-coal-value">0</span>
+            <span class="badge badge-secondary elements fcv2 corres-coal-value">0</span>
+            <span class="badge badge-secondary elements fcv3 corres-coal-value">0</span>
+            <span class="badge badge-secondary elements fcv4 corres-coal-value">0</span>
+            <span class="badge badge-secondary elements fcv5 corres-coal-value">0</span>
+            <span class="badge badge-secondary elements fcv6 corres-coal-value">0</span>
+            <span class="badge badge-secondary elements fcv7 corres-coal-value">0</span>
+            <span class="badge badge-secondary elements fcv8 corres-coal-value">0</span>
+            <span class="badge badge-secondary elements fcv9 corres-coal-value">0</span>
+            <span class="badge badge-secondary elements fcv10 corres-coal-value">0</span>
+            <span class="badge badge-secondary elements fcv11 corres-coal-value">0</span>
+            <span class="badge badge-secondary elements fcv12 corres-coal-value">0</span>
+            <span class="badge badge-secondary elements fcv13 corres-coal-value">0</span>
+            <span class="badge badge-secondary elements fcv14 corres-coal-value">0</span>
+            <span class="badge badge-secondary elements fcv15 corres-coal-value">0</span>
+            <span class="badge badge-secondary elements fcv16 corres-coal-value">0</span>
+            <span class="badge badge-secondary elements fcv17 corres-coal-value">0</span>
+            <span class="badge badge-secondary elements fcv18 corres-coal-value">0</span>
+            <span class="badge badge-secondary elements fcv19 corres-coal-value">0</span>
+          </div>
+        </div> -->
+      </div>
+      <div class="buttons-div">
+        <button class="btn btn-lg btn-success buttons calculate" type="button" name="button"><i class="fas fa-rupee-sign"></i> &nbsp; Calculate </button>
+        <button class="btn btn-lg btn-danger buttons reset" type="button" name="button"><i class="fas fa-redo"></i> &nbsp; Reset </button>
+      </div>
+
+      <table class="table table-bottom">
+        <thead class="bg-primary">
+          <tr>
+            <th class="top-left-corner">Parameter</th>
+            <th class="top-right-corner">Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="bg-info">Bill Value (Rs Cr)</td>
+            <td class="bg-secondary">0</td>
+          </tr>
+          <tr>
+            <td class="bg-info">A) Total Grade Materialization (Within & Above) (%)</td>
+            <td class="bg-secondary">0</td>
+          </tr>
+          <tr>
+            <td class="bg-info">B) Total Grade Slippage (%)</td>
+            <td class="bg-secondary">0</td>
+          </tr>
+          <tr>
+            <td class="bg-info">Total (A + B) - Must Equal 100 %</td>
+            <td class="bg-secondary">0</td>
+          </tr>
+          <tr>
+            <td class="bg-info">Coal Value As Per Billed Grade (Rs / Ton)</td>
+            <td class="bg-secondary">0</td>
+          </tr>
+          <tr>
+            <td class="bg-info">Credit / Debit (Rs / Ton)</td>
+            <td class="bg-secondary">0</td>
+          </tr>
+          <tr>
+            <td class="bg-info">Percentage of Credit / Debit in Bill Value (%)</td>
+            <td class="bg-secondary">0</td>
+          </tr>
+          <tr>
+            <td class="bg-info">Value of Credit / Debit (Rs Cr)</td>
+            <td class="bg-secondary">0</td>
+          </tr>
+          <tr>
+            <td class="bg-info bottom-left-corner">Net Coal Value After Credit / Debit (Rs Cr)</td>
+            <td class="bg-secondary bottom-right-corner">0</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- <div class="container-fluid">
+        <div class="middle-div-bottom row">
+          <div class="middle-div-bottom-left col-sm-6 col-6">
+            <span class="badge badge-info small">Bill Value (Rs Cr)</span>
+            <span class="badge badge-info small">A) Total Grade Materialization (Within & Above) (%)</span>
+            <span class="badge badge-info">B) Total Grade Slippage (%)</span>
+            <span class="badge badge-info small">Total (A + B) - Must Equal 100 %</span>
+            <span class="badge badge-info ">Coal Value As Per Billed Grade (Rs / Ton)</span>
+            <span class="badge badge-info">Credit / Debit (Rs / Ton)</span>
+            <span class="badge badge-info">Percentage of Credit / Debit in Bill Value (%)</span>
+            <span class="badge badge-info">Value of Credit / Debit (Rs Cr)</span>
+            <span class="badge badge-info">Net Coal Value After Credit / Debit (Rs Cr)</span>
+          </div>
+          <div class="middle-div-bottom-right col-sm-6 col-6">
+            <span class="badge badge-secondary calculation b1"> - </span>
+            <span class="badge badge-secondary calculation b2"> - </span>
+            <span class="badge badge-secondary calculation b3"> - </span>
+            <span class="badge badge-secondary calculation b4"> - </span>
+            <span class="badge badge-secondary calculation b5"> - </span>
+            <span class="badge badge-secondary calculation b6"> - </span>
+            <span class="badge badge-secondary calculation b7"> - </span>
+            <span class="badge badge-secondary calculation b8"> - </span>
+            <span class="badge badge-secondary calculation b9"> - </span>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </section>
+
+  <section id="bottom-section">
+    <div class="bottom-div">
+      <p>Designed and Developed By <a href="https://github.com/sasikanthtadimalla">Sasi Kanth Tadimalla.</a></p>
+      <div class="social-icons">
+        <a class="icon" href="https://www.facebook.com/sasi.kanth.965/"><i class="fab fa-facebook-square fa-2x"></i></a>
+        <a class="icon" href="http://github.com/sasikanthtadimalla"><i class="fab fa-github-square fa-2x"></i></a>
+        <a class="icon" href="https://www.linkedin.com/in/sasi-kanth-tadimalla-3942b218a/"><i class="fab fa-linkedin fa-2x"></i></a>
+        <a class="icon" href="mailto:sasithekanth@gmail.com"><i class="fas fa-envelope fa-2x"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="index.js" charset="utf-8"></script>
+</body>
+
+</html>

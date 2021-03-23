@@ -1,0 +1,61 @@
+/******************************************************* ABOUT PAGE *************************************************************/
+body {
+  background-color: #e4fbff;
+  text-align: center;
+}
+
+.margin-0 {
+  margin: 0;
+}
+
+.background-color-1 {
+  background-color: #5fdde5;
+}
+
+.top-part {
+  padding: 0 20% 3rem;
+}
+
+.margin-bottom-2rem {
+    margin-bottom: 2rem;
+}
+
+.font-color-1 {
+    color: #035aa6;
+}
+
+.top-part p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.instant-word, .price-notif {
+  color: #0075f6;
+}
+
+.middle-part {
+  background-color: white;
+  padding: 3rem 15%;
+}
+
+table {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.price-component, .billed-grade, .billed-qty, .grade-mat-slip, .calculate, .reset {
+  color: red;
+}
+
+.bottom-part {
+  padding: 1rem;
+}
+
+.bottom-part p {
+  margin-bottom: 1rem;
+}
+
+.icon {
+  margin: 1rem;
+  color: black;
+}
